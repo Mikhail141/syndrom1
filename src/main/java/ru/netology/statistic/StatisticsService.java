@@ -15,4 +15,21 @@ public class StatisticsService {
         current_max = income;
         return current_max;
   }
-}
+  public long findMaxMin(long[] incomes) {
+    long current_min_index = 0;
+    long current_min = incomes[0];
+    for (long income : incomes)
+      if (current_min > income)
+        current_min = income;
+    return current_min;
+  }
+  public long  calculateSum(long[] incomes) {
+    long sum = 0;
+    for (long income : incomes)
+      sum += income;
+    return sum;
+  }
+
+  }
+
+
